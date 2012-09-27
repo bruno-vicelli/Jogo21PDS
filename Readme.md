@@ -32,8 +32,8 @@ Passar a vez(parar);
 6 - Movimentos do baralho: 
 
 Fazer o embaralhamento das cartas;
-Distribuir 3 cartas iniciais para cada jogador;
+Distribuir 1 carta inicial para cada jogador;
 Permitir jogador retirar quantas quiser;
 
-obs: Gerar valores aleatórios por naipe, sem poder repetir carta.
+
 
