@@ -23,13 +23,11 @@ public class Jogo {
 
     }
 
-//    public void mostrarCartaInicialJogador(Jogador jogador) {
-//        System.out.println(jogador.getNome() + " Voce esta com: " + jogador.maoDoJogador.get(0).getNumero() + " pontos");
-//    }
+
     public int mostrarPontuacao(Jogador jogador) {
         int pontuacao = 0;
-        for (int i = 0; i < jogador.maoDoJogador.size(); i++) {
-            switch (jogador.maoDoJogador.get(i).getNumero()) {
+        for (int i = 0; i < jogador.getMaoDoJogador().size(); i++) {
+            switch (jogador.getMaoDoJogador().get(i).getNumero()) {
                 case ("A"):
                     pontuacao = pontuacao + 1;
                     break;
@@ -47,7 +45,7 @@ public class Jogo {
                     break;
 
                 default:
-                    int aInt = Integer.parseInt(jogador.maoDoJogador.get(i).getNumero());
+                    int aInt = Integer.parseInt(jogador.getMaoDoJogador().get(i).getNumero());
                     pontuacao = pontuacao + aInt;
                     break;
 

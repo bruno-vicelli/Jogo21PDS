@@ -14,8 +14,7 @@ import pds.Carta;
 public class Jogador {
 
     private String nome;
-    private Carta carta;
-    ArrayList<Carta> maoDoJogador = new ArrayList<Carta>();
+    private ArrayList<Carta> maoDoJogador = new ArrayList<Carta>();
 
     public Jogador(String nome) {
         this.nome = nome;
@@ -30,11 +29,13 @@ public class Jogador {
         this.nome = nome;
     }
 
-    public Carta getCarta() {
-        return carta;
+    public ArrayList<Carta> getMaoDoJogador() {
+        return maoDoJogador;
     }
 
-    public void setCarta(Carta carta) {
-        this.carta = carta;
+    public void setMaoDoJogador(ArrayList<Carta> maoDoJogador) {
+        this.maoDoJogador = maoDoJogador;
     }
+
+    
 }

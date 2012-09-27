@@ -24,8 +24,8 @@ public class Main {
         Baralho baralho = new Baralho();
         baralho.embaralhar();
 
-        jogador1.maoDoJogador.add(baralho.getPrimeiraCarta());
-        jogador2.maoDoJogador.add(baralho.getPrimeiraCarta());
+        jogador1.getMaoDoJogador().add(baralho.getPrimeiraCarta());
+        jogador2.getMaoDoJogador().add(baralho.getPrimeiraCarta());
         System.out.println(jogador1.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador1) + " pontos");
         System.out.println(jogador2.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador2) + " pontos");
 
@@ -42,6 +42,7 @@ public class Main {
                 jogador = jogo.trocaJogador();
             } catch (Exception e) {
                 System.out.println("erro ao trocar jogador");
+                e.printStackTrace();
             }
             System.out.println("Deseja pegar mais cartas " + jogador.getNome() + " ?(Digite s para sim, ou qualquer tecla para sair)");
 
@@ -49,9 +50,10 @@ public class Main {
                 resposta = entrada.readLine();
             } catch (Exception e) {
                 System.out.println("erro ao ler");
+                e.printStackTrace();
             }
             if (resposta.equals("s")) {
-                jogador.maoDoJogador.add(baralho.getPrimeiraCarta());
+                jogador.getMaoDoJogador().add(baralho.getPrimeiraCarta());
             }
 
             System.out.println(jogador1.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador1) + " pontos");
