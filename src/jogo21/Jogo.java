@@ -8,18 +8,25 @@ import pds.Baralho;
  */
 public class Jogo {
 
-    Jogador jogador = new Jogador("Teste");
+    private Jogador jogador1;
+    private Jogador jogador2;
+    private Jogador jogadorDaVez;
 
-    public Jogo() {
+    public Jogo(Jogador jogador1, Jogador jogador2) {
+
         System.out.println("JOGO INICIADO");
 
+        this.jogador1 = jogador1;
+        this.jogador2 = jogador2;
+        this.jogadorDaVez = jogador2;
+
+
     }
 
-    public void mostrarCartaInicialJogador(Jogador jogador) {
-        System.out.println(jogador.getNome() + " Voce esta com: " + jogador.maoDoJogador.get(0).getNumero() + " pontos");
-    }
-
-    public void mostrarPontuacao(Jogador jogador) {
+//    public void mostrarCartaInicialJogador(Jogador jogador) {
+//        System.out.println(jogador.getNome() + " Voce esta com: " + jogador.maoDoJogador.get(0).getNumero() + " pontos");
+//    }
+    public int mostrarPontuacao(Jogador jogador) {
         int pontuacao = 0;
         for (int i = 0; i < jogador.maoDoJogador.size(); i++) {
             switch (jogador.maoDoJogador.get(i).getNumero()) {
@@ -34,19 +41,64 @@ public class Jogo {
                 case ("Q"):
                     pontuacao = pontuacao + 10;
                     break;
-                    
+
                 case ("K"):
                     pontuacao = pontuacao + 10;
                     break;
-                    
+
                 default:
                     int aInt = Integer.parseInt(jogador.maoDoJogador.get(i).getNumero());
                     pontuacao = pontuacao + aInt;
                     break;
-                            
-                    
+
+
             }
         }
-        System.out.println(jogador.getNome() + " Voce esta com: " + pontuacao + " pontos");
+
+        return pontuacao;
     }
+
+    /**
+     * Método para verificar quem venceu No caso os jogadores vão pegando cartas
+     * até que eles queiram quando um deles não quiser mais carta o outro pode
+     * arriscar tirar mais uma e pode arricas e estourar 21
+     *
+     * @param jogador1
+     * @param jogador2
+     */
+    public Jogador verificarVencedor(Jogador jogador1, Jogador jogador2) {
+        if (mostrarPontuacao(jogador1) == 21 && mostrarPontuacao(jogador2) < 21) {
+            System.out.println(jogador1.getNome() + " venceu!");
+            return jogador1;
+        } else if (mostrarPontuacao(jogador2) == 21 && mostrarPontuacao(jogador1) < 21) {
+            System.out.println(jogador2.getNome() + " venceu!");
+            return jogador2;
+        } else if (mostrarPontuacao(jogador1) > 21 && mostrarPontuacao(jogador2) <= 21) {
+            System.out.println(jogador2.getNome() + " venceu!");
+            return jogador2;
+        } else if (mostrarPontuacao(jogador1) <= 21 && mostrarPontuacao(jogador2) > 21) {
+            System.out.println(jogador1.getNome() + " venceu!");
+            return jogador1;
+        } else if (mostrarPontuacao(jogador1) == 21 && mostrarPontuacao(jogador2) == 21) {
+            System.out.println("EMPATOU O JOGO!");
+        }
+
+        return null;
+
+    }
+    
+    
+    public Jogador trocaJogador() throws Exception{
+        if (jogadorDaVez.equals(jogador1)){
+            jogadorDaVez = jogador2;            
+        }
+        else if(jogadorDaVez.equals(jogador2)){
+            jogadorDaVez = jogador1;
+        }
+        else {
+            throw new Exception("Cue");
+        }
+        return jogadorDaVez;
+    }
+
 }

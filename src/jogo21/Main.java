@@ -17,40 +17,47 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Jogo jogo = new Jogo();
-        Baralho baralho = new Baralho();
-        baralho.embaralhar();
         Jogador jogador1 = new Jogador("Bruno");
         Jogador jogador2 = new Jogador("Helison");
+
+        Jogo jogo = new Jogo(jogador1, jogador2);
+        Baralho baralho = new Baralho();
+        baralho.embaralhar();
+
         jogador1.maoDoJogador.add(baralho.getPrimeiraCarta());
-        jogador2.maoDoJogador.add(baralho.getPrimeiraCarta());    
-        jogo.mostrarPontuacao(jogador1);
-        
-        
-//        BufferedReader entrada;
-//        entrada = new BufferedReader(new InputStreamReader(System.in));
-//
-//        do {
-//            System.out.println("Deseja pegar mais cartas?(Digite s para sim, ou qualquer tecla para sair)");
-//            while (true) {
-//                try {
-//                    j21.pegar = (entrada.readLine());
-//                  if (j21.pegar.equals("s")){
-//                        break;
-//                    } else {
-//                        System.out.println(j21.pegar);
-//                    }
-//                } catch (Exception e) {
-//                    System.out.println("erro");
-//                }
-//            }
-//            j21.embaralharjo();
-//            System.out.println("    ");
-//            System.out.println("Seus pontos estão em: " + j21.jpontos);
-//
-//        } while (if (j21.pegar.equals("s"));
-//        System.out.println("FIM");
-//    }
-//
-   }
+        jogador2.maoDoJogador.add(baralho.getPrimeiraCarta());
+        System.out.println(jogador1.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador1) + " pontos");
+        System.out.println(jogador2.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador2) + " pontos");
+
+
+
+        BufferedReader entrada;
+        entrada = new BufferedReader(new InputStreamReader(System.in));
+
+
+        Jogador jogador = null;
+        String resposta = "";
+        while (jogo.verificarVencedor(jogador1, jogador2) == null) {
+            try {
+                jogador = jogo.trocaJogador();
+            } catch (Exception e) {
+                System.out.println("erro ao trocar jogador");
+            }
+            System.out.println("Deseja pegar mais cartas " + jogador.getNome() + " ?(Digite s para sim, ou qualquer tecla para sair)");
+
+            try {
+                resposta = entrada.readLine();
+            } catch (Exception e) {
+                System.out.println("erro ao ler");
+            }
+            if (resposta.equals("s")) {
+                jogador.maoDoJogador.add(baralho.getPrimeiraCarta());
+            }
+
+            System.out.println(jogador1.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador1) + " pontos");
+            System.out.println(jogador2.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador2) + " pontos");
+
+
+        }
+    }
 }
