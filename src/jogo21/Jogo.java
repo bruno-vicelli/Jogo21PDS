@@ -18,8 +18,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * 
  *
- * @author Bruno
+ * Universidade Federal do Pampa
+ * Graduação: Engenharia de Software
+ * Disciplina: Práticas de Desenvolvimento de Software
+ * Professor: Wagner de Melo Reck
+ * Semestre: 5° - 2012/01 
+ * @author Bruno Vicelli
+ * @Version 1.0 @Date 27/09/2012
  */
 public class Jogo {
 
