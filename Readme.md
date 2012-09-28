@@ -1,11 +1,10 @@
-O 21 é jogado com um ou mais baralhos de 52 cartas, no caso somente um, para cujos valores será designado um total de pontos. As cartas de 2 a 10 terão o valor dos números. Reis, damas e valetes valem 10 pontos cada e ases valem 1. O objetivo para o jogador será comprar cartas até um total de 21 pontos (sem exceder), vence o jogador que somar 21 ou ficar mais perto de 21 sem exceder o valor.
+O 21 ï¿½ jogado com um ou mais baralhos de 52 cartas, no caso somente um, para cujos valores serï¿½ designado um total de pontos. As cartas de 2 a 10 terï¿½o o valor dos nï¿½meros. Reis, damas e valetes valem 10 pontos cada e ases valem 1. O objetivo para o jogador serï¿½ comprar cartas atï¿½ um total de 21 pontos (sem exceder), vence o jogador que somar 21 ou ficar mais perto de 21 sem exceder o valor.
 
 
-1 - Objetivo: O objetivo é conseguir 21 pontos com as cartas do baralho. Também sairá vencedor aquele jogador que na rodada conseguir o maior número de pontos não ultrapassando o limite.
+1 - Objetivo: O objetivo ï¿½ conseguir 21 pontos com as cartas do baralho. Tambï¿½m sairï¿½ vencedor aquele jogador que na rodada conseguir o maior nï¿½mero de pontos nï¿½o ultrapassando o limite.
 
-2 - Cartas: Cada jogador retira carta após carta, contatndo os pontos, quantas achar necessário até parar por estratégia se chegou próximo ao limite ou se estourar a pontuação mas não precisa informar o que aconteceu (blefe), após todos pedirem suas quantidades ganha quem fez mais pontos até o limite.
-
-3 - Pontos: Os naipes são irrelevantes,  a pontuação é dada da seguinte forma:
+2 - Cartas: Cada jogador retira carta apï¿½s carta, contatndo os pontos, quantas achar necessï¿½rio atï¿½ p
+3 - Pontos: Os naipes sï¿½o irrelevantes,  a pontuaï¿½ï¿½o ï¿½ dada da seguinte forma:
 
 A vale 1 ponto;
 2 vale 2 pontos;
@@ -21,9 +20,9 @@ J vale 10 pontos;
 Q vale 10 pontos;
 K vale 10 pontos
 
-4 - Limite de jogadores: Mínimo 2, máximo fica a critério de quantos baralhos estão na mesa. para 2 baralhos (104 cartas) jogam até 10 pessoas tranquilo. No caso desse feito em programação seria viável usar as 52 cartas e por tanto um máximo de 6 jogadores.
+4 - Limite de jogadores: Mï¿½nimo 2, mï¿½ximo fica a critï¿½rio de quantos baralhos estï¿½o na mesa. para 2 baralhos (104 cartas) jogam atï¿½ 10 pessoas tranquilo. No caso desse feito em programaï¿½ï¿½o seria viï¿½vel usar as 52 cartas e por tanto um mï¿½ximo de 6 jogadores.
 
-5 - Movimentos: Os movimentos que cada jogador faz são:
+5 - Movimentos: Os movimentos que cada jogador faz sï¿½o:
 
 Retirar carta;
 Passar a vez(parar);
