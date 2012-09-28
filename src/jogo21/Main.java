@@ -1,13 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * <copyright>
+ * 
+ * Copyright 2012 Burno Vicelli <brunodosax@hotmail.com>
+ *  * 
+ * Este programa e todos os materiais que o acompanham estão disponibilizados
+ * sob a licença GPL versão 3, que acompanha esta distribuição e está disponível
+ * em http://www.gnu.org/licenses/gpl.html
+ * </copyright>
  */
+
 package jogo21;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import pds.Baralho;
-import pds.Carta;
 
 /**
  *
@@ -17,19 +23,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Jogador jogador1 = new Jogador("Bruno");
-        Jogador jogador2 = new Jogador("Helison");
-
+        Jogador jogador1 = new Jogador("");
+        Jogador jogador2 = new Jogador("");
+        
         Jogo jogo = new Jogo(jogador1, jogador2);
+        jogo.trocaNomeJogador(jogador1, jogador2);
+        
         Baralho baralho = new Baralho();
         baralho.embaralhar();
-
+        
         jogador1.getMaoDoJogador().add(baralho.getPrimeiraCarta());
         jogador2.getMaoDoJogador().add(baralho.getPrimeiraCarta());
         System.out.println(jogador1.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador1) + " pontos");
         System.out.println(jogador2.getNome() + " esta com: " + jogo.mostrarPontuacao(jogador2) + " pontos");
-
-
 
         BufferedReader entrada;
         entrada = new BufferedReader(new InputStreamReader(System.in));
@@ -37,14 +43,15 @@ public class Main {
 
         Jogador jogador = null;
         String resposta = "";
-        while (jogo.verificarVencedor(jogador1, jogador2) == null) {
+        while (jogo.verificaVencedor(jogador1, jogador2) == null) {
             try {
                 jogador = jogo.trocaJogador();
             } catch (Exception e) {
                 System.out.println("erro ao trocar jogador");
                 e.printStackTrace();
             }
-            System.out.println("Deseja pegar mais cartas " + jogador.getNome() + " ?(Digite s para sim, ou qualquer tecla para sair)");
+            System.out.println("Digite 's' para pegar mais uma carta: "
+                    + " " + jogador.getNome() + "!");
 
             try {
                 resposta = entrada.readLine();

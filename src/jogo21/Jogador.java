@@ -1,6 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * <copyright>
+ * 
+ * Copyright 2012 Burno Vicelli <brunodosax@hotmail.com>
+ *  * 
+ * Este programa e todos os materiais que o acompanham estão disponibilizados
+ * sob a licença GPL versão 3, que acompanha esta distribuição e está disponível
+ * em http://www.gnu.org/licenses/gpl.html
+ * </copyright>
  */
 package jogo21;
 
