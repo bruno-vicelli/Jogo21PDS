@@ -9,7 +9,8 @@
 package jogo21;
 
 import java.util.ArrayList;
-import pds.Carta;
+import pds.baralho.Carta;
+
 
 /**
  * Classe Jogador que implementa as caracteristicas de um jogador dentro do jogo

@@ -10,7 +10,8 @@ package jogo21;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import pds.Baralho;
+import pds.baralho.Baralho;
+
 
 /**
  *
