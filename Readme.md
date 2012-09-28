@@ -1,11 +1,10 @@
-﻿O 21 eh jogado com um ou mais baralhos de 52 cartas, no caso somente um, para cujos valores sera designado um total de pontos. As cartas de 2 a 10 terao o valor dos números. Reis, damas e valetes valem 10 pontos cada e ases valem 1. O objetivo para o jogador sera comprar cartas ateh um total de 21 pontos (sem exceder), vence o jogador que somar 21 ou ficar mais perto de 21 sem exceder o valor.
+﻿﻿O 21 eh jogado com um ou mais baralhos de 52 cartas, no caso somente um, para cujos valores sera designado um total de pontos. As cartas de 2 a 10 terao o valor dos números. Reis, damas e valetes valem 10 pontos cada e ases valem 1. O objetivo para o jogador sera comprar cartas ateh um total de 21 pontos (sem exceder), vence o jogador que somar 21 ou ficar mais perto de 21 sem exceder o valor.
 
 1 - Objetivo: O objetivo eh conseguir 21 pontos ou menos sem estourar o limeite.
 
 2 - Cartas: Cada jogador retira carta apos carta, contatndo os pontos, perde quem estourar 21 primeiro.
 
 3 - Pontos: Os naipes sao irrelevantes,  a pontuacao eh dada da seguinte forma:
-
 A vale 1 ponto;
 2 vale 2 pontos;
 3 vale 3 pontos;
@@ -20,13 +19,10 @@ J vale 10 pontos;
 Q vale 10 pontos;
 K vale 10 pontos
 
-
 4 - Movimentos: Os movimentos que cada jogador faz sao:
-
 Retirar carta;
 
 6 - Movimentos do baralho: 
-
 Fazer o embaralhamento das cartas;
 Distribuir 1 carta inicial para cada jogador;
 Permitir jogador retirar quantas quiser;
