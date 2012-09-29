@@ -10,8 +10,8 @@ package jogo21;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import pds.baralho.Baralho;
-
+import pds.Baralho;
+import java.util.ArrayList;
 
 /**
  *
@@ -35,15 +35,14 @@ public class Main {
 
         Jogador jogador1 = new Jogador("");
         Jogador jogador2 = new Jogador("");
+        Baralho baralho = new Baralho();
+        baralho.embaralhar();
 
         Jogo jogo = new Jogo(jogador1, jogador2);
         jogo.defineNomeJogador(jogador1, jogador2);
 
-        Baralho baralho = new Baralho();
-        baralho.embaralhar();
-
-        jogador1.getMaoDoJogador().add(baralho.getPrimeiraCarta());
-        jogador2.getMaoDoJogador().add(baralho.getPrimeiraCarta());
+        jogador1.addCarta(baralho.getPrimeiraCarta());
+        jogador2.addCarta(baralho.getPrimeiraCarta());
         System.out.println(jogador1.getNome() + " esta com: " + jogo.calculaPontuacao(jogador1) + " pontos");
         System.out.println(jogador2.getNome() + " esta com: " + jogo.calculaPontuacao(jogador2) + " pontos");
 
@@ -70,13 +69,11 @@ public class Main {
                 e.printStackTrace();
             }
             if (resposta.equals("s")) {
-                jogador.getMaoDoJogador().add(baralho.getPrimeiraCarta());
+                jogador.addCarta(baralho.getPrimeiraCarta());
             }
 
             System.out.println(jogador1.getNome() + " esta com: " + jogo.calculaPontuacao(jogador1) + " pontos");
             System.out.println(jogador2.getNome() + " esta com: " + jogo.calculaPontuacao(jogador2) + " pontos");
-
-
         }
     }
 }

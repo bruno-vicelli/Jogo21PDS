@@ -9,8 +9,7 @@
 package jogo21;
 
 import java.util.ArrayList;
-import pds.baralho.Carta;
-
+import pds.Carta;
 
 /**
  * Classe Jogador que implementa as caracteristicas de um jogador dentro do jogo
@@ -25,7 +24,7 @@ import pds.baralho.Carta;
 public class Jogador {
 
     private String nome;
-    private ArrayList<Carta> maoDoJogador = new ArrayList<Carta>();
+    private ArrayList<Carta> maoDoJogador;
 
     /**
      * Método construtor da classe Jogador
@@ -34,6 +33,7 @@ public class Jogador {
      */
     public Jogador(String nome) {
         this.nome = nome;
+        this.maoDoJogador = new ArrayList<Carta>();
     }
 
     /**
@@ -71,5 +71,9 @@ public class Jogador {
      */
     public void setMaoDoJogador(ArrayList<Carta> maoDoJogador) {
         this.maoDoJogador = maoDoJogador;
+    }
+
+    public boolean addCarta(Carta carta) {
+        return this.maoDoJogador.add(carta);
     }
 }
