@@ -31,8 +31,11 @@ Permitir jogador retirar quantas quiser;
 
 Requisitos necessários:
 -Ter o java instalado
+
 -Ter o ant instalado na máquina
+
 -Ter o IzPack instalado na máquina
+
 
 Para construir a aplicação utilizando o ANT:
 Abra e terminal e vá até o diretório principal que contém o arquivo build.xml;
