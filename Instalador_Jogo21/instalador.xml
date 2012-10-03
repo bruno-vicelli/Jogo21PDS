@@ -27,11 +27,11 @@
         <langpack iso3="por"/>
     </locale>
     <resources>
-        <res id="InfoPanel.info" parse="yes" src="C:\Users\Bruno\Documents\NetBeansProjects\Jogo21\docs\Readme.txt"/>
-        <res id="LicencePanel.licence" parse="yes" src="C:\Users\Bruno\Documents\NetBeansProjects\Jogo21\docs\COPYING.txt"/>
+        <res id="InfoPanel.info" parse="yes" src="Readme.txt"/>
+        <res id="LicencePanel.licence" parse="yes" src="COPYING.txt"/>
         <res id="shortcutSpec.xml" src="instalador_shortcutSpec.xml"/>
         <res id="Unix_shortcutSpec.xml" src="instalador_Unix_shortcutSpec.xml"/>
-        <res id="installer.langsel.img" src="C:\Users\Bruno\Documents\NetBeansProjects\Jogo21\docs\cartoes-de-jogo_21-3731.jpg"/>
+        
     </resources>
     <panels>
         <panel classname="CheckedHelloPanel"/>
@@ -50,12 +50,12 @@
         <pack name="Jogo21" preselected="yes" required="yes">
             <description/>
             <file override="update"
-                src="C:\Users\Bruno\Documents\NetBeansProjects\Jogo21\dist\Jogo21.jar" targetdir="$INSTALL_PATH/"/>
+                src="../build/Jogo21.jar" targetdir="$INSTALL_PATH/build/"/>
         </pack>
         <pack name="API Cartas" preselected="yes" required="yes">
             <description/>
             <file override="update"
-                src="C:\Users\Bruno\Documents\NetBeansProjects\Jogo21\dist\lib\apicartas.jar" targetdir="$INSTALL_PATH/lib/"/>
+                src="../lib/apicartas.jar" targetdir="$INSTALL_PATH/lib/"/>
         </pack>
     </packs>
     <native name="ShellLink.dll" type="izpack"/>
