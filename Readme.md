@@ -30,6 +30,7 @@ Permitir jogador retirar quantas quiser;
 ----------------------------------------------------
 
 Requisitos necessários:
+
 -Ter o java instalado
 
 -Ter o ant instalado na máquina
