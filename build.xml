@@ -11,8 +11,7 @@
 	</path>
 	
 	<target name="init">
-		<delete dir="${build.dir}"/>
-		<delete dir="${bin.dir}"/>
+		
 		<mkdir dir="${build.dir}"/>
 		<mkdir dir="${bin.dir}"/>
 	</target>

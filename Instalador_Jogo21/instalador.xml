@@ -44,7 +44,7 @@
         <panel classname="SimpleFinishPanel"/>
     </panels>
     <variables>
-        <variable name="DesktopShortcutCheckboxEnabled" value="true"/>
+        <variable name="DesktopShortcutCheckboxEnabled" value="false"/>
     </variables>
     <packs>
         <pack name="Jogo21" preselected="yes" required="yes">
