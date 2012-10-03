@@ -28,6 +28,7 @@ Distribuir 1 carta inicial para cada jogador;
 Permitir jogador retirar quantas quiser;
 
 ----------------------------------------------------
+
 Para construir a aplicação:
 Abra e terminal e vá até o diretório principal que contém o arquivo build.xml
 digite o comando: ant
