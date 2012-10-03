@@ -29,15 +29,20 @@ Permitir jogador retirar quantas quiser;
 
 ----------------------------------------------------
 
-Para construir a aplicação:
+Requisitos necessários:
+-Ter o java instalado
+-Ter o ant instalado na máquina
+-Ter o IzPack instalado na máquina
+
+Para construir a aplicação utilizando o ANT:
 Abra e terminal e vá até o diretório principal que contém o arquivo build.xml;
 digite o comando: ant;
 Na pasta build o Jogo21.jar vai ser criado;
 
 ----------------------------------------------------
 
-Para compilar o instalador:
-Caminhe ate a pasta Instalador_Jogo21;
-digite o comando: compile instalador.xml;
+Para compilar o instalador utilizando o IZPACK:
+Abra e terminal e vá até o diretório Instalador_Jogo21;
+Digite o comando: compile instalador.xml;
 O instalador.jar vai ser criado na mesma pasta;
 
